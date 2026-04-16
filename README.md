@@ -8,10 +8,13 @@ Root File Reader also has some general ntuple.root processing using uproot.
 
 
 
-# Instructions for running programs
+# Instructions for running simulations/analyses
 Added by Emma Ellingwood 16/04/26
 
 **Note :** Daniel wrote detailed breakdowns of the functions in the different analyses in his [Documentation for Codes](https://stfc365.sharepoint.com/:w:/r/sites/BoleynPrototype/_layouts/15/Doc.aspx?sourcedoc=%7B7C4FAD90-35EA-43A2-B98A-B7C8671E6622%7D&file=Documentation%20for%20Codes.docx&action=default&mobileredirect=true).
+
+Instructions assume ratpac-two and BUTTON-RAT2 are both installed and working.
+If you haven't already done it at the beginning of a session make sure the ratpac and button environments are both source. For example, **env.sh** in ratpac-setup and **button.sh** in BUTTON-RAT2.
 
 ## Coincidence Study
 1. Open **make_all_coincidence_macros.C**
