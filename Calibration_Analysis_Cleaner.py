@@ -414,22 +414,6 @@ def GetCombinedPMTPulseDataFromFile(numberOfPMTs, sourceType, fileName):
         integrationsList = output["fit_FOM_ButtonWave_integration"].array()
         print(range(len(integrationsList)))
         
-        # The old way was just a nested for loop but it was too slow to run on the 10M event data
-        # So there's a new way beneath that is more efficient.
-        #for integrationList in output["fit_FOM_ButtonWave_integration"].array():
-        # for triggeredEventNumber in range(len(output["fit_FOM_ButtonWave_integration"].array())):
-        #     print(triggeredEventNumber)
-        #     integrationList = output["fit_FOM_ButtonWave_integration"].array()[triggeredEventNumber]
-        #     pmtIDList = output["digitPMTID"].array()[triggeredEventNumber]
-            
-        #     if len(integrationList) == 0:
-        #         #print("Empty")
-        #         continue
-        #     else:
-        #         #print(integrationList)
-        #         for i in range(len(integrationList)):
-        #             currentPMTID = pmtIDList[i]
-        #             combinedPMTPulseData[currentPMTID].append(integrationList[i])
         
         print()
         pmtIDList = output["digitPMTID"].array()
@@ -591,7 +575,6 @@ if __name__ == "__main__":
     with open('../BUTTON-RAT2/ratdb/BUTTON/PMTINFO.ratdb') as data:
         PMTInfoDict = ast.literal_eval(data.read())
     channel_numbers = PMTInfoDict["channel_number"]
-    #channel_numbers = [148,97,157,153,155,130,171,29,6,146,61,107,9,47,134,92,167,26,14,102,135,59,160,103,154,150,169,75,16,27,94,998,132,83,76,7,78,143,166,88,84,138,49,96,48,37,67,163,53,12,10,87,34,42,33,104,15,105,142,30,164,82,81,90,32,57,74,133,147,161,63,66,149,3,145,106,999,108,28,98,141,159,50,136,1,54,51,43,71,111,55,65,56,112,162,73]
     print(len(channel_numbers))
     
     
